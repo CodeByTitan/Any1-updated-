@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/app_background"
+    android:layout_height="match_parent"
+    tools:context=".feature_login.presentation.SavedAccounts">
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/firabold"
+        android:text="ANY1"
+        android:textColor="@color/fblue"
+        android:textSize="60sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text"
+        android:id="@+id/savedaccountrecyclerview"
+        android:layout_below="@id/textView8"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/hnmed"
+        android:text="Login with credentials"
+        android:textColor="@color/fblue"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/arrowup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/text"
+        android:layout_marginBottom="5dp"
+        android:rotation="90"
+        android:src="@drawable/doublearrow"
+        app:tint="@color/fblue" />
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="1dp"
+    android:id="@+id/relativeleft"
+    android:layout_height="wrap_content">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/senderpfp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignBottom="@+id/showemojimessage"
+        android:src="@drawable/gigachad"
+        app:civ_border="false" />
+
+    <androidx.emoji.widget.EmojiTextView
+        android:id="@+id/showemojimessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/senderpfp"
+        android:background="@drawable/chatleftlastmessage"
+        android:fontFamily="@font/hnmed"
+        android:maxWidth="250dp"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="15dp"
+        android:text="hi how are you"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="visible" />
+</RelativeLayout>

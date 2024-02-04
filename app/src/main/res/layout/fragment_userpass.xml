@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/app_background"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    tools:context=".feature_signup.presentation.UsernamePassword">
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hnmed"
+        android:text="Create a Username"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nxt" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="And Password"
+        android:textSize="25sp"
+        android:id="@+id/tv2"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/hnmed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:elevation="15dp"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="5dp"
+        android:fontFamily="@font/hnmed"
+        android:backgroundTint="@color/fblue"
+        app:icon="@drawable/ic_arrowfwd"
+        app:iconGravity="end"
+        app:iconTint="@color/samewhite"
+        android:text="NEXT"
+        android:textColor="@color/greywhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/uninput"
+        android:layout_width="250dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/fblue"
+        app:hintTextColor="@color/fblue"
+        android:hint="Username"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:errorTextColor="#FFDD2C00"
+        app:layout_constraintTop_toBottomOf="@+id/tv2">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:digits="abcdefghijklmnopqrstuvwxyz1234567890_."
+            android:inputType="textFilter"
+            android:theme="@style/pointercolor"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:fontFamily="@font/hnmed"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passinput"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:hintTextColor="@color/fblue"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@color/fblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uninput">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:theme="@style/pointercolor"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_."
+            android:fontFamily="@font/hnmed"
+            android:hint="Password"
+            android:inputType="textPassword|textFilter"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:src="@drawable/ic_tick"
+        android:id="@+id/tick"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/passinput"
+        app:layout_constraintStart_toEndOf="@+id/uninput"
+        app:layout_constraintTop_toTopOf="@+id/uninput"
+        app:tint="@color/fblue" />
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/progressbarr"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/fblue"
+        app:layout_constraintBottom_toTopOf="@+id/passinput"
+        app:layout_constraintStart_toEndOf="@+id/uninput"
+        app:layout_constraintTop_toTopOf="@+id/uninput" />
+</androidx.constraintlayout.widget.ConstraintLayout>

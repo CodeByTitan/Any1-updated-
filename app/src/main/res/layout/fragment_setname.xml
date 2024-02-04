@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/app_background"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:layout_height="match_parent"
+    tools:context=".feature_signup.presentation.Name">
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/hnbold"-->
+<!--        android:text="Almost There!"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:textSize="35sp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/namenext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:elevation="15dp"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="5dp"
+        android:fontFamily="@font/hnmed"
+        android:backgroundTint="@color/fblue"
+        app:icon="@drawable/ic_arrowfwd"
+        app:iconTint="@color/samewhite"
+        app:iconGravity="end"
+        android:text="next"
+        android:textColor="@color/greywhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hnmed"
+        android:id="@+id/themeswitch"
+        android:paddingStart="15dp"
+        android:text="Dark Mode"
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        android:checked="false"
+        android:theme="@style/SCBSwitch"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview8" />
+
+<!--    <com.ms.square.android.expandabletextview.ExpandableTextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        app:animDuration="2000"-->
+<!--        android:fontFamily="@font/hnmed"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:maxCollapsedLines="1"-->
+<!--        android:drawableRight="@drawable/ic_arrowdown"-->
+<!--        android:textSize="20sp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview8">-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:text="Choose App Theme "-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </com.ms.square.android.expandabletextview.ExpandableTextView>-->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/hnbold"
+        android:text="Set Your Display Name"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="75dp"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textview8"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/black"
+        android:layout_marginStart="13dp"
+        app:hintTextColor="@color/fblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/displayname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/hnmed"
+            android:backgroundTint="@color/fblue"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:theme="@style/namefield" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

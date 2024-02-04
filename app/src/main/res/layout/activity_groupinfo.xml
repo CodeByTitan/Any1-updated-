@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@color/app_background"
+    android:layout_height="match_parent"
+    tools:context=".feature_group.presentation.GroupInfo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/lock"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_cil_lock_locked"
+            app:layout_constraintBottom_toBottomOf="@+id/groupname"
+            app:layout_constraintStart_toEndOf="@+id/go"
+            app:layout_constraintTop_toTopOf="@+id/groupname"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/go"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_circlearrowfwd"
+            app:layout_constraintBottom_toBottomOf="@+id/groupname"
+            app:layout_constraintStart_toEndOf="@+id/groupname"
+            app:layout_constraintTop_toTopOf="@+id/groupname"
+            app:tint="@color/black" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/gcinfotoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="150dp"
+            android:theme="@style/Theme.AppCompat.Light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_leftarrow"
+            app:title="Group Info"
+            app:titleTextAppearance="@style/TitleBarTextAppearance"
+            app:titleTextColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/groupname"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fblue"
+            android:fontFamily="@font/hnmed"
+            android:hint="Group Name"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/black"
+            android:theme="@style/pointercolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changegroupphoto" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="10dp"
+            android:visibility="visible"
+            android:id="@+id/edittags"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintBottom_toBottomOf="@+id/tags"
+            app:layout_constraintStart_toEndOf="@+id/tags"
+            app:layout_constraintTop_toTopOf="@+id/tags" />
+        <TextView
+            android:id="@+id/tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/hnmed"
+            android:text="Group Search Tags"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/fblue"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/groupname" />
+
+
+        <TextView
+            android:id="@+id/changegroupphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change group photo"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hnmed"
+            android:textColor="@color/fblue"
+            app:layout_constraintEnd_toEndOf="@+id/gcphoto"
+            app:layout_constraintStart_toStartOf="@+id/gcphoto"
+            app:layout_constraintTop_toBottomOf="@+id/gcphoto" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tagrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layoutDirection="ltr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tags" />
+
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/hnmed"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Accessibility"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videocallenable" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/accessibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/textView16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView16">
+        </androidx.appcompat.widget.AppCompatSpinner>
+
+        <ImageView
+            android:layout_width="18dp"
+            android:id="@+id/edittagssettings"
+            android:layout_marginStart="10dp"
+            android:layout_height="18dp"
+            app:tint="@color/black"
+            android:rotation="90"
+            android:src="@drawable/ic_dots"
+            app:layout_constraintBottom_toBottomOf="@+id/tags"
+            app:layout_constraintStart_toEndOf="@+id/edittags"
+            app:layout_constraintTop_toTopOf="@+id/tags" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/mutemessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:paddingStart="15dp"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="15dp"
+            android:text="Mute Message Notifcations"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/pointercolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tagrecyclerview" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/mutecall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:text="Mute Call Notifications"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/pointercolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mutemessages" />
+
+
+        <TextView
+            android:id="@+id/requeststext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnbold"
+            android:text="Requests"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rankingupdates" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/requests"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/requeststext"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/approval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:text="Approval required to join"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/pointercolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mutecall" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/videocallenable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Video Call"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/pointercolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/approval" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/nosimping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="No Simping"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:theme="@style/pointercolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+
+        <CheckBox
+            android:id="@+id/rankingupdates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:button="@drawable/custom_checkbox"
+            android:fontFamily="@font/hnmed"
+            android:layoutDirection="rtl"
+            android:text="Receive group ranking updates"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nosimping" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:text="25 members"
+            android:id="@+id/membercount"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/grayasl"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/memberstext"
+            app:layout_constraintRight_toRightOf="parent"
+          />
+        <TextView
+            android:id="@+id/memberstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnbold"
+            android:text="Members"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addtogc" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addtogc"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/samewhite"
+            android:text="Add To Group"
+            android:fontFamily="@font/hnbold"
+            android:textAllCaps="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/fblue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requests" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/memberstext">
+
+            <TextView
+                android:id="@+id/addmember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/addbutton"
+                android:fontFamily="@font/hnmed"
+                android:text="Add members..."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/addbutton"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_add_svgrepo2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:tint="@color/black" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/addbutton"
+                android:layout_marginTop="10dp"
+                android:background="@color/lightgray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/memberrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/leavegroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/memberrecyclerview"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:fontFamily="@font/hnmed"
+                android:text="Leave Group"
+                android:textColor="@color/dusrared"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            app:civ_border="false"
+            android:src="@drawable/wojakgc"
+            android:id="@+id/gcphoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gcinfotoolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setup"
+    app:startDestination="@id/userpass">
+
+    <fragment
+        android:id="@+id/userpass"
+        android:name="com.example.any1.feature_signup.presentation.UsernamePassword"
+        android:label="fragment_userpass"
+        tools:layout="@layout/fragment_userpass" >
+    </fragment>
+    <fragment
+        android:id="@+id/displaynamepic"
+        android:name="com.example.any1.feature_signup.presentation.Pic"
+        android:label="fragment_displaynamepic"
+        tools:layout="@layout/fragment_displaynamepic" />
+    <fragment
+        android:id="@+id/email2"
+        android:name="com.example.any1.feature_signup.presentation.Email"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_email" >
+    </fragment>
+    <fragment
+        android:id="@+id/emailverification"
+        android:name="com.example.any1.feature_signup.presentation.EmailVerification"
+        android:label="fragment_emailverification"
+        tools:layout="@layout/fragment_emailverification" />
+    <fragment
+        android:id="@+id/setname"
+        android:name="com.example.any1.feature_signup.presentation.Name"
+        android:label="fragment_setname"
+        tools:layout="@layout/fragment_setname" />
+    <fragment
+        android:id="@+id/datepicker"
+        android:name="com.example.any1.feature_signup.presentation.Date"
+        android:label="fragment_datepicker"
+        tools:layout="@layout/fragment_datepicker" >
+    </fragment>
+    <fragment
+        android:id="@+id/gender"
+        android:name="com.example.any1.feature_signup.presentation.Gender"
+        android:label="fragment_gender"
+        tools:layout="@layout/fragment_gender" />
+</navigation>

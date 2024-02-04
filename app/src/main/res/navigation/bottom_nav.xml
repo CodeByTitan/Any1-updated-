@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.any1.core.main.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_home2_to_directmessage2"
+            app:destination="@id/directmessage2" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.any1.core.profile.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/directmessage2"
+        android:name="com.example.any1.feature_chat.presentation.DirectMessage"
+        android:label="fragment_directmessage"
+        tools:layout="@layout/fragment_directmessage" >
+        <action
+            android:id="@+id/action_directmessage2_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+</navigation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testnav"
+    app:startDestination="@id/testfrag">
+
+    <fragment
+        android:id="@+id/testfrag"
+        android:name="com.example.any1.core.main.BottomNavFrag"
+        android:label="fragment_testfrag"
+        tools:layout="@layout/fragment_testfrag" />
+    <fragment
+        android:id="@+id/directmessage3"
+        android:name="com.example.any1.feature_chat.presentation.DirectMessage"
+        android:label="fragment_directmessage"
+        tools:layout="@layout/fragment_directmessage" />
+</navigation>

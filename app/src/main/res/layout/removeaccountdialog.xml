@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="30dp"
+    android:backgroundTint="@color/grayindark">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/removeaccounttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hnbold"
+            android:paddingTop="10dp"
+            android:text="Remove Account"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/removeaccountinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/removeaccounttext"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="5dp"
+            android:fontFamily="@font/hnmed"
+            android:maxLines="4"
+            android:text="You will need to enter your username and password the next time you want to log in. "
+            android:textAlignment="center"
+            android:textColor="@color/randomgrey"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/hnmed"
+            android:gravity="center"
+            android:text="Cancel"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/remove"
+        android:layout_marginTop="10dp"
+        android:background="@color/dividergrey" />
+
+        <TextView
+            android:id="@+id/remove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/hnmed"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Remove"
+            android:textColor="@color/fblue"
+            android:textSize="18sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/removeaccountinfo"
+            android:layout_marginTop="10dp"
+            android:background="@color/dividergrey" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

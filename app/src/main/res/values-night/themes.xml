@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Any1" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/green</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="autoCompleteTextViewStyle">@style/SearchAutoCompleteTextView</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+    </style>
+    <style name="SearchAutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
+    <style name="Dialoganimation">
+        <item name="android:windowEnterAnimation">@anim/slideinbottom</item>
+        <item name="android:windowExitAnimation">@anim/slideoutbottom</item>
+    </style>
+    <style name="TitleBarTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/hnmed</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+<!--    <style name="emailfield" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        <item name="colorControlNormal">@color/black</item>-->
+<!--        <item name="android:textColorPrimary">@color/black</item>-->
+<!--        <item name="colorControlActivated">@color/fblue</item>-->
+<!--        <item name="colorControlHighlight">@color/fblue</item>-->
+<!--    </style>-->
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#1778F2</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal"> #bdbfbb
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+     Customize your theme here.
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/white"
+    android:animateLayoutChanges="true"
+    tools:context=".feature_chat.presentation.Chat">
+
+    <RelativeLayout
+        android:id="@+id/dmtoolbar"
+        android:backgroundTint="@color/white"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/groupinfo"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_info_svgrepo_com__1_"
+                app:layout_constraintBottom_toBottomOf="@+id/videocall"
+                app:layout_constraintTop_toTopOf="@+id/videocall"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/videocall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toLeftOf="@+id/groupinfo"
+                android:src="@drawable/ic_video_outline"
+                app:layout_constraintEnd_toStartOf="@+id/groupinfo"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/groupchatrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/materialCardView"
+            android:layout_below="@id/relativeLayout"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:backgroundTint="@color/white" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/berylightgrey"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:minHeight="50dp"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cameracard"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/fblue"
+                    app:cardCornerRadius="90dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/chatcamera"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/ic_camera"
+                            app:tint="@color/samewhite" />
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:id="@+id/gallery"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="2dp"
+                    android:layout_toStartOf="@+id/gif"
+                    android:src="@drawable/ic_gallery"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:id="@+id/vn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toStartOf="@id/gallery"
+                    android:src="@drawable/ic_micoutline" />
+
+                <ImageView
+                    android:id="@+id/gif"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_gif"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/hnmed"
+                    android:text="Send"
+                    android:textColor="@color/fblue"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
+
+<!--                <EditText-->
+<!--                    android:id="@+id/grouptext"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:layout_toStartOf="@+id/vn"-->
+<!--                    android:layout_toEndOf="@+id/cameracard"-->
+<!--                    android:background="@null"-->
+<!--                    android:cursorVisible="true"-->
+<!--                    android:fontFamily="@font/hnmed"-->
+<!--                    android:inputType="textNoSuggestions"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textCursorDrawable="@style/search"-->
+<!--                    android:theme="@style/pointercolor"g-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+                <EditText
+                    android:id="@+id/gcedittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toStartOf="@id/send"
+                    android:layout_toEndOf="@id/cameracard"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:fontFamily="@font/hnmed"
+                    android:inputType="textNoSuggestions|textMultiLine"
+                    android:maxHeight="87dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:theme="@style/pointercolor" />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/chatbackbutton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/ic_leftarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/gcpic"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/wojakgc"
+        app:civ_border="false"
+        app:layout_constraintBottom_toBottomOf="@+id/chatbackbutton"
+        app:layout_constraintStart_toEndOf="@+id/chatbackbutton"
+        app:layout_constraintTop_toTopOf="@+id/chatbackbutton" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hnmed"
+        android:maxWidth="180dp"
+        android:maxLines="1"
+        android:id="@+id/grouptitle"
+        android:text="fnkajdsfklnafsdknfkjandfskj"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gcpic"
+        app:layout_constraintStart_toEndOf="@+id/gcpic"
+        app:layout_constraintTop_toTopOf="@+id/gcpic" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:backgroundTint="@color/app_background"
+    android:maxHeight="200dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/removerequesttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hidetags"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/hnmed"
+            android:maxLines="4"
+            android:text="Do you want to hide group search tags from members?"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/hidetags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/hnbold"
+            android:maxLines="4"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:text="Hide Tags"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/removerequesttext"
+            android:layout_marginTop="15dp"
+            android:background="@color/lightgray" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/hide"
+            android:layout_marginTop="15dp"
+            android:background="@color/lightgray" />
+
+        <TextView
+            android:id="@+id/hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/hnmed"
+            android:text="Hide"
+            android:textAlignment="center"
+            android:textColor="@color/fblue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider3"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/hnmed"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_background">#121212</color>
+    <color name="black">#FFFFFF</color>
+    <color name="samewhite">#FFFFFF</color>
+    <color name="white">#FF000000</color>
+    <color name="gray2">#899190</color>
+    <color name="gray">#dcdfe3</color>
+    <color name="lightgray">#3d3d39</color>
+    <color name="samelightgray">#dcdfe3</color>
+    <color name="greywhite">#FFFFFF</color>
+    <color name="grayindark">#292b2e</color>
+    <color name= "sameblack">#FF000000</color>
+    <color name="whitegrey">#D3D3D3</color>
+    <color name="grey">#899190</color>
+    <color name="grayasl">#ffffffff</color>
+    <color name="lightgrey">#dfe6e0</color>
+    <color name="berylightgrey">#1b1c1b</color>
+    <color name="randomgrey">#bdbfbe</color>
+    <color name="dividergrey">#82807c</color>
+    <color name="samplegray">#30332f</color>
+    <color name="lightestgrey">#30332f</color>
+</resources>

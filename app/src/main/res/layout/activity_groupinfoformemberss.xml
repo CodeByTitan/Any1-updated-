@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/app_background"
+    android:layout_height="match_parent"
+    tools:context=".feature_group.presentation.GroupInfo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/gcinfotoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="150dp"
+            android:theme="@style/Theme.AppCompat.Light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_leftarrow"
+            app:title="Group Info"
+            app:titleTextAppearance="@style/TitleBarTextAppearance"
+            app:titleTextColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/groupname"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:inputType="textNoSuggestions"
+            android:theme="@style/pointercolor"
+            android:hint="Group Name"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/fblue"
+            android:textColorHint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gcphoto" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/mutemessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            app:layout_constraintTop_toBottomOf="@+id/groupname"
+            android:paddingStart="15dp"
+            android:layout_marginTop="15dp"
+            android:paddingEnd="15dp"
+            android:text="Mute Message Notifcations"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/pointercolor"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/mutecall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/hnmed"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginTop="5dp"
+            android:text="Mute Call Notifications"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:theme="@style/pointercolor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mutemessages" />
+
+        <TextView
+            android:id="@+id/memberstext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/hnbold"
+            android:text="Members"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mutecall" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/memberstext"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/addmember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/addbutton"
+                android:fontFamily="@font/hnmed"
+                android:text="Add members..."
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/addbutton"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/ic_add_svgrepo2"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <View
+                android:background="@color/grey"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:id="@+id/divider"
+                android:layout_below="@+id/addbutton"
+                android:layout_height="1dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/memberrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:text="Leave Group"
+                android:fontFamily="@font/hnmed"
+                android:layout_marginStart="15dp"
+                android:layout_below="@+id/memberrecyclerview"
+                android:textColor="@color/dusrared"
+                android:id="@+id/leavegroup"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            app:civ_border="false"
+            android:src="@drawable/wojakgc"
+            android:id="@+id/gcphoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gcinfotoolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

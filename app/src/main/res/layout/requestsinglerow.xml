@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/memberpfp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/gigachad"
+        app:civ_border="false" />
+
+    <TextView
+        android:id="@+id/membername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@+id/memberpfp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hnmed"
+        android:maxWidth="110dp"
+        android:maxLines="1"
+        android:text="ArshSethilkfadkldmdskjdsk"
+        android:textColor="@color/black" />
+
+    <CheckBox
+        android:id="@+id/requestcheckbox"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:button="@drawable/custom_checkbox_blue"
+        android:fontFamily="@font/hnmed"
+        android:text=""
+        android:textAllCaps="false"
+        android:theme="@style/Theme.AppCompat" />
+
+    <ImageView
+        android:id="@+id/removerequestimage"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:layout_toStartOf="@+id/requestcheckbox"
+        android:src="@drawable/x"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/memberusername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/membername"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/memberpfp"
+        android:ellipsize="end"
+        android:fontFamily="@font/hnmed"
+        android:maxWidth="110dp"
+        android:maxLines="1"
+        android:text="arsh.sethi"
+        android:textColor="@color/grayasl" />
+</RelativeLayout>

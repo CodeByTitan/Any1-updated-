@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Any1</string>
+    <string name="clientid">903459592242-lugq1p5b6e6kt9gtskvp56letq9pho24.apps.googleusercontent.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emailverification">A verification link has been sent on your email address. Kindly check your email and verify 🥸</string>
+    <string name="skip"><u>Skip</u></string>
+    <string name="welcomeking">Welcome King 👑</string>
+    <string name="welcomequeen">Welcome Queen 👑</string>
+    <string name="forgotemail">We have sent an email to you at %s. It contains a link which will let you change your password. Go ahead and check your email 🥸</string>
+    <string name="emptydmmale">Looks like your dm is clean. Go find yourself some homies king 👑</string>
+    <string name="emptydmfemale">Looks like your dm is clean. Go find yourself some simps queen 👑</string>
+    <string name="gctagstring">%s is now your unique gc tag. People can search for your gc using this tag</string>
+    <string name="membercount">%d/30</string>
+    <string name="rankupdatestring">You will now be notified about your group ranking in the search menu of your primary group search tag. To know more about how we will rank your group, click learn more.</string>
+    <string name="approvaldialogtext">%s requires admin approval to join. Do you want to send request to this group?</string>
+    <string name="groupconnections">%d connections in this group</string>
+    <string name="removerequest">Do you want to remove %s\'s request? They won\'t know if you remove their request.</string>
+    <string name="Any1">Any1</string>
+</resources>

@@ -1,0 +1,14 @@
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/textviewww"
+    android:padding="14dp"
+    android:theme="@style/Theme.AppCompat.Light"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:fontFamily="@font/hnmed"
+    android:textSize="15sp"
+    android:textColor="@color/black"
+    android:text="textview"/>

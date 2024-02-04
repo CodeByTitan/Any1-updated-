@@ -1,0 +1,91 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Any1" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="fontFamily">@font/hnmed</item>
+        <item name="android:textSize">15dp</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorAccent">@color/green</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="autoCompleteTextViewStyle">@style/SearchAutoCompleteTextView</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/app_background</item>
+    </style>
+    <style name="SearchAutoCompleteTextView" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
+    <style name="Dialoganimation">
+        <item name="android:windowEnterAnimation">@anim/slideinbottom</item>
+        <item name="android:windowExitAnimation">@anim/slideoutbottom</item>
+    </style>
+    <style name="pointercolor">
+        <item name="colorControlActivated">@color/fblue</item>
+    </style>
+    <style name="search">
+        <item name="colorControlActivated">@color/fblue</item>
+        <item name="fontFamily">@font/hnmed</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/dialogbg</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="idk">
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+    <style name="TitleBarTextAppearance" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/hnmed</item>
+        <item name="android:textSize">20sp</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="maxWidth">280dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="TabLayoutTextAppearance" parent="android:TextAppearance">
+        <item name="fontFamily">@font/hnmed</item>
+    </style>
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#1778F2</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal"> #bdbfbb
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
+    </style>
+    <style name="bottomnavtheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlHighlight">@color/fblue</item>
+    </style>
+    <style name="emailfield" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/black</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="colorControlActivated">@color/fblue</item>
+        <item name="colorControlHighlight">@color/fblue</item>
+    </style>
+    <style name="namefield">
+        <item name="colorControlNormal">@color/app_background</item>
+        <item name="colorControlActivated">@color/fblue</item>
+        <item name="colorControlHighlight">@color/fblue</item>
+    </style>
+        <!-- Customize your theme here. -->
+</resources>

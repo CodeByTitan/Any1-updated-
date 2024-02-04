@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    tools:context=".feature_login.presentation.Login">
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:id="@+id/loginprogress"
+        android:layout_height="30dp"
+        android:indeterminateTint="@color/samewhite"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/loginbutton"
+        app:layout_constraintEnd_toEndOf="@+id/loginbutton"
+        app:layout_constraintStart_toStartOf="@+id/loginbutton"
+        app:layout_constraintTop_toTopOf="@+id/loginbutton" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/hnmed"
+        android:text="Forgot Login Details?"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/loginbutton"
+        app:layout_constraintTop_toBottomOf="@+id/loginbutton" />
+
+    <TextView
+        android:id="@+id/gethelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/hnbold"
+        android:text="Get Help"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/fblue"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/loginbutton" />
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/firabold"
+        android:text="ANY1"
+        android:textColor="@color/fblue"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@+id/uninput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/uninput"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/fblue"
+        android:textColorHint="@color/black"
+        app:errorTextColor="#FFDD2C00"
+        app:hintTextColor="@color/fblue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/loginusername"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:digits="abcdefghijklmnopqrstuvwxyz@1234567890_."
+            android:fontFamily="@font/hnmed"
+            android:hint="Username or Email"
+            android:inputType="textFilter"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:theme="@style/pointercolor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passinput"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/fblue"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/fblue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/uninput"
+        app:passwordToggleDrawable="@drawable/show_password_selector"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/loginpassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_."
+            android:fontFamily="@font/hnmed"
+            android:hint="Password"
+            android:inputType="textFilter"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:theme="@style/pointercolor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbutton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/fblue"
+        android:ellipsize="end"
+        android:fontFamily="@font/hnmed"
+        android:maxLines="1"
+        android:paddingStart="35dp"
+        android:paddingEnd="40dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/samewhite"
+        app:cornerRadius="5dp"
+        app:iconGravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passinput" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/fblue"
+        android:id="@+id/text"
+        android:fontFamily="@font/hnmed"
+        android:text="Use Saved Accounts"
+        android:isScrollContainer="false"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/arrow"
+        app:layout_constraintEnd_toEndOf="@+id/arrow"
+        app:layout_constraintStart_toStartOf="@+id/arrow" />
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:rotation="-90"
+        app:tint = "@color/fblue"
+        android:isScrollContainer="false"
+        android:id="@+id/arrow"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/doublearrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
